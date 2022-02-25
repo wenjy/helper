@@ -60,3 +60,11 @@ go helper
 `NowTime` 当前时间
 
 `DateTime` 当前时间格式化为 `Y-m-d H:i:s`
+
+## Pool
+
+### 字节切片池
+
+`DefaultBufferPool.Alloc`
+
+`DefaultBufferPool.Free`
