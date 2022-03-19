@@ -19,6 +19,12 @@ func ConnIsClose(err error) bool {
 		strings.Contains(err.Error(), "broken pipe")
 }
 
+// 根据错误来判断监听是否已关闭
+func AcceptIsClose(err error) bool {
+	return strings.Contains(err.Error(), "use of closed network connection") ||
+		strings.Contains(err.Error(), "the mux has closed")
+}
+
 // NormalizeMac 规范化 MAC，去掉 `:` 再转为小写
 func NormalizeMac(mac string) string {
 	return strings.ToLower(strings.ReplaceAll(mac, ":", ""))
