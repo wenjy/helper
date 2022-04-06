@@ -6,7 +6,7 @@ import (
 )
 
 // DefaultBufferPool 默认全局buffer池.
-var DefaultBufferPool = NewBytePool(32768, []int{8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768})
+var DefaultBufferPool = NewBytePool(32768, []int{8, 16, 32, 64, 128, 256, 512, 1024, 1032, 2048, 4096, 8192, 16384, 32768})
 
 // BytePool 字节缓冲池结构体
 type BytePool struct {
